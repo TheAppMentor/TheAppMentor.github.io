@@ -30,6 +30,7 @@ Advantages of using a script :
 - Scripts can run automatically in the background. You can decided the time and frequency. 
 - It can be a lot of fun to watch the computer do things for you.
 
+
 -------------
 
 Language of instrunction :
@@ -52,27 +53,28 @@ Setup required to start Automation.
 
 -------------
 
-Launch Script Editor :
-Applications > Utilities > Script Editor 
-![alt text](./open_script_editor.png)
+1. Launch Script Editor : Applications > Utilities > Script Editor 
+
+![Script Editor](/assets/images/script_editor_01.png){:class="img-responsive"}
+
+2. Change the language to JavaScript
+
+![image-title-here](/assets/images/script_editor_select_javascript.png){:class="img-responsive"}
 
 Lets look at some example.
 
 Lauching an Application. This script will open the 'Finder' appliation and bring it to the front.
 
-**1.1** : Launch Finder
-{% highlight javascript %}
+_Code 1.1 : Launch Finder_
+{% highlight javascript linenos %}
 const finder = Application('Finder')
-finder.activate()
-{% endhighlight %}
-
+finder.activate() {% endhighlight %}
 When you run this script the finder application should launch and become the frontmost app.
 
-<br />
 Next, we can now ask the finder application to create a folder.
 
 **1.2** : Create a new folder named "MyScripts" 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 // Create a new folder on the Desktop
 finder.make({
     new: 'folder',
