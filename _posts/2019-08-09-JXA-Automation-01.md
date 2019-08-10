@@ -33,25 +33,22 @@ Advantages of using a script :
 
 -------------
 
-Language of instrunction :
+Language of instruction :
 On a Mac there are two popular languages you can use to write your script. 
  	1. AppleScript - This is language created by Apple for primarily for writing scripts.
  	2. JavaScript - An extremely popular language used widely to build things on the internet.
 
 **Note :** There a other lanuages too, the two above are the most popular.
 
-We will use JavaScript in this post. 
+We will use JavaScript in this post.  
 
-_You can Automate Stuff on the Mac_
-
-_Show some simple examples Of Mac Automation_
-
-Setup required to start Automation.
-1. Any Apple Mac.
-2. Script Editor : Comes pre-installed on your mac
-3. Basic understanding of programming. (Nice to have)
+## Requirements :
+1. Any Apple Mac (Running MacOS)
+2. Script Editor - Comes pre-installed on your mac.
+3. Basic understanding of Javascript & some programming experience. (Nice to have)
 
 -------------
+Lets write some code.
 
 1. Launch Script Editor : Applications > Utilities > Script Editor 
 
@@ -61,19 +58,20 @@ Setup required to start Automation.
 
 ![image-title-here](/assets/images/script_editor_select_javascript.png){:class="img-responsive"}
 
-Lets look at some example.
+We begin with a simple script to launch an application and bring it the front. 
 
-Lauching an Application. This script will open the 'Finder' appliation and bring it to the front.
+The code in `Code 1.1` will open the 'Finder' application and bring it to the front.
 
-_Code 1.1 : Launch Finder_
+_**Code 1.1** : Launch Finder_
 {% highlight javascript linenos %}
 const finder = Application('Finder')
 finder.activate() {% endhighlight %}
-When you run this script the finder application should launch and become the frontmost app.
+
+You can open almost any application by substituting 'Finder' with your application name. (eg : Safari,Notes etc)
 
 Next, we can now ask the finder application to create a folder.
-
-**1.2** : Create a new folder named "MyScripts" 
+In `Code 1.2` we instruct the finder applciation to create a folder named 'MyScripts' 
+_**Code 1.2** : Create a new folder named "MyScripts"_
 {% highlight javascript linenos %}
 // Create a new folder on the Desktop
 finder.make({
@@ -88,7 +86,7 @@ finder.make({
 
 By default the finder app creates the new folder on the Desktop. We can change it any other path by adding an `at` property. 
 
-**1.3** : _Create a new folder in the *Documents* folder_ 
+_**Code 1.3** : Create a new folder in the *Documents* folder_ 
 {% highlight javascript linenos %}
 // Create a new folder in the 'Documents' folder 
 finder.make({
@@ -100,32 +98,21 @@ finder.make({
 })
 {% endhighlight %}
 
-<br />
-
 ### Checking for conditions.
-When we re-run the scripts we wrote above, we will see an error because the folder with the name 'MyScripts' already exists.
 
-We can fix this by first checking if the folder already exists.
+When we run the scripts `Code 1.2` or `Code 1.3` more than once, we get an error. This is because we are trying to the folder with the name 'MyScripts' already exists.
 
-**1.4** : Check if a folder exits at a location 
-{% highlight javascript %}
+We can fix this by first checking if the folder already exists and only then creating the new folder.
+
+_**Code 1.4** : Check if a folder exits at a location._ 
+{% highlight javascript linenos %}
 // Create a new folder in the 'Documents' folder 
 if (finder.folders['MyScripts'].exists() == false) {
-  // Create 'MyScripts' folder.    
+    // Create 'MyScripts' folder.    
 }
 {% endhighlight %}
 
-## Sample code :
+As you can see, we can write scripts the mimic user actions. Although the examples above seem trivial. The true strength of scripts is the ability to make different applicaitons talk to each other.
 
-- Automating Finder.
-
-
-- Launch Safari and Open a webpage
-
-Every morning, I visit a few websites to check the news, check how the my stocks are doing and check the weather.
-
-#### Next Steps :
-- Automating Other application, Notes.
-
-
+Next we will look at more scripts to automate finder operation.
 
