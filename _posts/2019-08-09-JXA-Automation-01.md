@@ -112,7 +112,7 @@ if (finder.folders['MyScripts'].exists() == false) {
 }
 {% endhighlight %}
 
-As you can see, we can write scripts the mimic user actions. Although the examples above seem trivial. The true strength of scripts is the ability to make different applicaitons talk to each other.
+As you can see, we can write scripts the mimic user actions. Although the examples above are trivial. The true strength of scripts is the ability to make different applicaitons talk to each other.
 
 Next we will look at more scripts to automate finder operation.
 
