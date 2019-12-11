@@ -7,7 +7,7 @@ categories:
 ---
 
 Every morning I sit down with my cup of coffee, I visit three websites, cnn.com to check the latest news, www.moneycontrol.com to check how my stocks are doing, and www.weather.com to check todays weather. It takes me about a mintue to open my browser (Safari) and launch these webpages.
-If do that everyday for the year thats roughly 300 minutes of type URLs.
+nnnnnIf do that everyday for the year thats roughly 300 minutes of type URLs.
 
 This is just a trivial example, but there are a lot of other similar tasks I am sure I do every day. 
 ```let a = 10```
@@ -115,4 +115,3 @@ if (finder.folders['MyScripts'].exists() == false) {
 As you can see, we can write scripts the mimic user actions. Although the examples above are trivial. The true strength of scripts is the ability to make different applicaitons talk to each other.
 
 Next we will look at more scripts to automate finder operation.
-
