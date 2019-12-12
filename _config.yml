@@ -25,7 +25,7 @@ baseurl: ''
 title: 'My website'
 description: 'This is my new website'
 permalink: pretty
-google_analytics: 'UA-154473306-1'
+google_analytics: 'UA-154473306-1-Chikri'
 #logo: ""
 #logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
 logo: "https://avatars.dicebear.com/v2/avataaars/bottts.svg?options[top][]=shortHair&options[topChance]=100&options[hairColor][]=black&options[accessories][]=wayfarers&options[facialHair][]=majestic&options[facialHairChance]=68&options[facialHairColor][]=gray&options[clothes][]=shirt&options[clothesColor][]=black&options[eyes][]=roll&options[eyebrow][]=up&options[mouth][]=tongue&options[skin][]=brown"
@@ -55,4 +55,3 @@ collections:
     #feature_text: |
     #Welcome to my blog
     #feature_image: "https://picsum.photos/2560/600?image=866"
-    google_analytics: 'Ghink Chak'
